@@ -13,7 +13,7 @@ public class Score : MonoBehaviour
         GetComponent<TextMeshProUGUI>().text = myScore.ToString();
     }
 
-    public void resetScord()
+    public void resetScore()
     {
         myScore = 0;
         GetComponent<TextMeshProUGUI>().text = myScore.ToString();

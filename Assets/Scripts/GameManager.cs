@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
             boi.relaunchObject();
         }
         FindObjectOfType<UIManager>().Start();
-        FindObjectOfType<Score>().resetScord();
+        FindObjectOfType<Score>().resetScore();
 
     }
     // Update is called once per frame
