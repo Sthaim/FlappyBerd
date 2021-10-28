@@ -18,7 +18,6 @@ public class GameManager : MonoBehaviour
         {
             boi.relaunchObject();
         }
-        FindObjectOfType<UIManager>().Start();
         FindObjectOfType<Score>().resetScore();
 
     }

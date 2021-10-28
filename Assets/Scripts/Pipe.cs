@@ -26,6 +26,6 @@ public class Pipe : MonoBehaviour
     }
     void Update()
     {
-        transform.position -= Vector3.right * Speed;
+        transform.position -= Vector3.right * Speed * Time.deltaTime;
     }
 }
