@@ -19,7 +19,6 @@ public class UIManager : MonoBehaviour
 
     public void buttonSmash()
     {
-        Debug.Log("button");
         gameOverPanel.gameObject.SetActive(false);
         Boutton.gameObject.SetActive(false);
         StartPanel.gameObject.SetActive(true);
@@ -38,10 +37,8 @@ public class UIManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && StartPanel.activeSelf)
         {
-            Debug.Log("oui");
             StartPanel.gameObject.SetActive(false);
             Time.timeScale = 1;
         }
-        Debug.Log(StartPanel.activeSelf);
     }
 }

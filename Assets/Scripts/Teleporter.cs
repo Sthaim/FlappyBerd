@@ -9,12 +9,7 @@ public class Teleporter : MonoBehaviour
         if (p_collision.GetComponent<Pipe>() != null)
         {
             p_collision.transform.position = new Vector2(8.5f , Random.Range(-2f, 4f));
-            Debug.Log("bitch");
 
         }
-        Debug.Log("bitch");
-
-
-
     }
 }
