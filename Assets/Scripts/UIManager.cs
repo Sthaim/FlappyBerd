@@ -10,26 +10,26 @@ public class UIManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameOverPanel.gameObject.SetActive(false);
-        Boutton.gameObject.SetActive(false);
-        StartPanel.gameObject.SetActive(true);
+        gameOverPanel.SetActive(false);
+        Boutton.SetActive(false);
+        StartPanel.SetActive(true);
         Time.timeScale = 0;
 
     }
 
     public void buttonSmash()
     {
-        gameOverPanel.gameObject.SetActive(false);
-        Boutton.gameObject.SetActive(false);
-        StartPanel.gameObject.SetActive(true);
+        gameOverPanel.SetActive(false);
+        Boutton.SetActive(false);
+        StartPanel.SetActive(true);
         FindObjectOfType<GameManager>().relaunchGame();
     }
 
     // Update is called once per frame
     public void triggerGameOver()
     {
-        gameOverPanel.gameObject.SetActive(true);
-        Boutton.gameObject.SetActive(true);
+        gameOverPanel.SetActive(true);
+        Boutton.SetActive(true);
         Time.timeScale = 0;
 
     }
@@ -37,7 +37,8 @@ public class UIManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && StartPanel.activeSelf)
         {
-            StartPanel.gameObject.SetActive(false);
+            StartPanel.SetActive(false);
+            FindObjectOfType<GameManager>().player.gameObject.SetActive(true);
             Time.timeScale = 1;
         }
     }

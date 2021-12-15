@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public Player player;
+    private void Awake()
+    {
+        player = FindObjectOfType<Player>();
+    }
     void Start()
     {
-        
+        player.gameObject.SetActive(false);
     }
     public void relaunchGame()
     {
-        Player _player = FindObjectOfType<Player>();
-        _player.relaunchObject();
+        player.relaunchObject();
         Pipe[] _pipe = FindObjectsOfType<Pipe>();
         foreach (Pipe boi in _pipe)
         {
